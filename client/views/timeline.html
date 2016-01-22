@@ -1,0 +1,17 @@
+<template name="timeline">
+    <div class="row">
+        <fieldset class="com-sm-12">
+            <legend>últimos posts</legend>
+            {{#each post in posts}}
+                <blockquote class="lead">
+                    <p>{{post.message}}</p>
+                    <small>
+                        Autor: <a href="/user/{{post.userId}}">{{post.name}}</a>
+                    </small>
+                </blockquote>
+            {{else}}
+                <p class="lead text-center">Nenhum post publicado</p>
+            {{/each}}
+        </fieldset>
+    </div>
+</template>
